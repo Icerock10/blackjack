@@ -1,0 +1,503 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+
+    }
+body {
+  margin-bottom: 12vh;
+
+}
+.blog-masthead {
+  background: #161616;
+  height: 78px;
+}
+
+.blog-header {
+  background: #050806;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 10px 10px;
+}
+.blog-title{
+  color: white;
+}
+.nav-link {
+  color: white;
+}
+.nav-link-signup {
+  color: #E7E4ED;
+  margin-left: 8px;
+  padding-top: 20px;
+  font-size: 18px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.nav-link-signin {
+  color: #E7E4ED;
+  margin-left: 600px;
+  padding-top: 20px;
+  font-size: 18px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+.logo-img {
+ border: 1px solid black;
+ }
+ #nav-home{
+   border-left: 1px solid white;
+   margin-left: 195px;
+ }
+#nav-play{
+  margin-left: 30px;
+border-left: 1px solid white;
+}
+#nav-rules {
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+#nav-profile {
+  margin-left: 30px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+li {
+  display: block;
+float: left;
+white-space: nowrap;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 12vh; /*высота футера будет зависеть от высоты экрана*/
+}
+footer {
+    background: #161616;
+
+}
+.text-muted {
+  margin-left: 120px;
+}
+.btn {
+  height: 50%;
+  margin-top: 15px;
+}
+
+#main-container img {
+  margin-left: 120px;
+  margin-top: 50px;
+
+}
+.form-signin {
+  border: 1px solid #d8dee2;
+  border-radius: 10px 10px;
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.label-link {
+  margin-left: 120px;
+}
+.form-signin-heading {
+  margin-left: 460px;
+
+}
+.logo-cards {
+  margin-left: 485px;
+  margin-top: 35px;
+}
+.new_account {
+  border: 1px solid #d8dee2;
+  margin: 0 auto;
+  max-width: 430px;
+  margin-top: 30px;
+  border-radius: 5px 5px;
+  padding: 15px;
+}
+.create-link {
+margin-left: 80px;
+}
+.form-registration-2 {
+  border: 1px solid #d8dee2;
+  border-radius: 10px 10px;
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.form-registration-heading-2 {
+  margin-left: 455px;
+}
+.blackjacktable {
+      position: relative;
+      width: 100%;
+      height: 720px;
+      background:  url('./images/img/table.png') center no-repeat;
+      background-size: 60%;
+}
+#page-about {
+      width: 100%;
+      height: 1000px;
+      background: #e5e5e5;
+}
+#registration {
+  width: 100%;
+  height: 600px;
+  background: #e5e5e5;
+
+}
+#sign-in {
+  width: 100%;
+  height: 600px;
+  background: #e5e5e5;
+}
+#first-image-about {
+  margin-top: 10px;
+  width: 100%;
+  height: 300px;
+  background: url('./images/img/aboutphoto.jpg')  no-repeat;
+  background-size: 100%;
+  border: 3px solid black;
+
+}
+
+#rules-page {
+  margin-top: 35px;
+  margin-left: 200px;
+  width: 70%;
+  background: white;
+  height: 800px;
+  border: 1px solid #738287;
+  border-radius: 5px 5px;
+  position: relative;
+}
+.rules-h1 {
+  padding-top: 20px;
+  margin-left: 480px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.rulesp{
+
+    line-height: 16px;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    margin: .8em 2em;
+    color: #404040;
+    word-wrap: break-word;
+}
+#first-image-main {
+  width: 100%;
+  height: 800px;
+  background: url('./images/img/mainimage.jpg')  no-repeat;
+  background-size: 100%;
+
+
+}
+.card-1 {
+      height: 100px;
+      width: 80px;
+      background-repeat: no-repeat;
+      position: relative;
+      border: 1px solid gray;
+}
+#krest2 {
+  background: url('./images/img/2krest.png');
+  background-size: 100%;
+}
+
+#krest3 {
+  background: url('./images/img/3krest.png');
+  background-size: 100%;
+}
+#krest4 {
+  background: url('./images/img/4krest.png');
+  background-size: 100%;
+}
+#krest5 {
+  background: url('./images/img/5krest.png');
+  background-size: 100%;
+}
+#krest6 {
+  background: url('./images/img/6krest.png');
+  background-size: 100%;
+}
+#krest7 {
+  background: url('./images/img/7krest.png');
+  background-size: 100%;
+}
+#krest8 {
+  background: url('./images/img/8krest.png');
+  background-size: 100%;
+}
+#krest9 {
+  background: url('./images/img/9krest.png');
+  background-size: 100%;
+}
+#krest10 {
+  background: url('./images/img/10krest.png');
+  background-size: 100%;
+}
+#krestvalet {
+  background: url('./images/img/valetkrest.png');
+  background-size: 100%;
+}
+#krestdama {
+  background: url('./images/img/damakrest.png');
+  background-size: 100%;
+}
+#krestkorol {
+  background: url('./images/img/korolkrest.png');
+  background-size: 100%;
+}
+#kresttuz {
+  background: url('./images/img/tuzkrest.png');
+  background-size: 100%;
+}
+
+#bybna2 {
+  background: url('./images/img/2bybna.png');
+  background-size: 100%;
+}
+
+#bybna3 {
+  background: url('./images/img/3bybna.png');
+  background-size: 100%;
+}
+#bybna4 {
+  background: url('./images/img/4bybna.png');
+  background-size: 100%;
+}
+#bybna5 {
+  background: url('./images/img/5bybna.png');
+  background-size: 100%;
+}
+#bybna6 {
+  background: url('./images/img/6bybna.png');
+  background-size: 100%;
+}
+#bybna7 {
+  background: url('./images/img/7bybna.png');
+  background-size: 100%;
+}
+#bybna8 {
+  background: url('./images/img/8bybna.png');
+  background-size: 100%;
+}
+#bybna9 {
+  background: url('./images/img/9bybna.png');
+  background-size: 100%;
+}
+#bybna10 {
+  background: url('./images/img/10bybna.png');
+  background-size: 100%;
+}
+#bybnavalet {
+  background: url('./images/img/valetbybna.png');
+  background-size: 100%;
+}
+#bybnadama {
+  background: url('./images/img/damabybna.png');
+  background-size: 100%;
+}
+#bybnakorol {
+  background: url('./images/img/korolbybna.png');
+  background-size: 100%;
+}
+#bybnatuz {
+  background: url('./images/img/tuzbybna.png');
+  background-size: 100%;
+}
+
+#chirva2 {
+  background: url('./images/img/2chirva.png');
+  background-size: 100%;
+}
+
+#chirva3 {
+  background: url('./images/img/3chirva.png');
+  background-size: 100%;
+}
+#chirva4 {
+  background: url('./images/img/4chirva.png');
+  background-size: 100%;
+}
+#chirva5 {
+  background: url('./images/img/5chirva.png');
+  background-size: 100%;
+}
+#chirva6 {
+  background: url('./images/img/6chirva.png');
+  background-size: 100%;
+}
+#chirva7 {
+  background: url('./images/img/7chirva.png');
+  background-size: 100%;
+}
+#chirva8 {
+  background: url('./images/img/8chirva.png');
+  background-size: 100%;
+}
+#chirva9 {
+  background: url('./images/img/9chirva.png');
+  background-size: 100%;
+}
+#chirva10 {
+  background: url('./images/img/10chirva.png');
+  background-size: 100%;
+}
+#chirvavalet {
+  background: url('./images/img/valetchirva.png');
+  background-size: 100%;
+}
+#chirvadama {
+  background: url('./images/img/damachirva.png');
+  background-size: 100%;
+}
+#chirvakorol {
+  background: url('./images/img/korolchirva.png');
+  background-size: 100%;
+}
+#chirvatuz {
+  background: url('./images/img/tuzchirva.png');
+  background-size: 100%;
+}
+
+#pika2 {
+  background: url('./images/img/2pika.png');
+  background-size: 100%;
+}
+
+#pika3 {
+  background: url('./images/img/3pika.png');
+  background-size: 100%;
+}
+#pika4 {
+  background: url('./images/img/4pika.png');
+  background-size: 100%;
+}
+#pika5 {
+  background: url('./images/img/5pika.png');
+  background-size: 100%;
+}
+#pika6 {
+  background: url('./images/img/6pika.png');
+  background-size: 100%;
+}
+#pika7 {
+  background: url('./images/img/7pika.png');
+  background-size: 100%;
+}
+#pika8 {
+  background: url('./images/img/8pika.png');
+  background-size: 100%;
+}
+#pika9 {
+  background: url('./images/img/9pika.png');
+  background-size: 100%;
+}
+#pika10 {
+  background: url('./images/img/10pika.png');
+  background-size: 100%;
+}
+#pikavalet {
+  background: url('./images/img/valetpika.png');
+  background-size: 100%;
+}
+#pikadama {
+  background: url('./images/img/damapika.png');
+  background-size: 100%;
+}
+#pikakorol {
+  background: url('./images/img/korolpika.png');
+  background-size: 100%;
+}
+#pikatuz {
+  background: url('./images/img/tuzpika.png');
+  background-size: 100%;
+}
+
+
+
+
+.player-1 {
+position: absolute;
+width: 70px;
+height: 85px;
+background: url('./images/img/dealer.png')no-repeat;
+background-size: 100%;
+left: 320px;
+bottom: 325px;
+}
+
+.player-2 {
+  position: absolute;
+  width: 70px;
+  height: 85px;
+  background: url('./images/img/dealer.png')no-repeat;
+  background-size: 100%;
+  left: 1520px;
+  bottom: 325px;
+}
+
+.player-3 {
+  position: absolute;
+  width: 70px;
+  height: 85px;
+  background: url('./images/img/dealer.png') no-repeat;
+  background-size: 100%;
+  bottom: 25px;
+  left: 900px;
+}
+.button-bet {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  left: 1110px;
+  bottom: 20px;
+}
+.button-hide {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  left: 1250px;
+  bottom: 20px;
+}
+
+#inputfile {
+ margin-top: 20px;
+
+}
+.changes {
+  font-size: 18px;
+
+}
+.user-avatar {
+  position: relative;
+  width: 120px;
+  height: 110px;
+  background: white;
+  border: 1px solid green;
+  left: 490px;
+  margin-top: 20px;
+}
+#autorization-pass{
+   margin-top: 30px;
+}
+#registration-surname {
+  margin-top: 30px;
+}
+#registration-email {
+  margin-top: 30px;
+}
+#registration-password {
+  margin-top: 30px;
+}

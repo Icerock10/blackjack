@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".show-cards").hide();
+    $("#make-bet").click(function(){
+        $(".show-cards").show();
+    });
+    $("#hide-cards").click(function(){
+        $(".show-cards").hide();
+    });
+});

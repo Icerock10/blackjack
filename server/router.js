@@ -1,62 +1,116 @@
-function run(app, userModel){
+function run(app, userModel, passport){
 
 	app.get("/", function(req, res){
-		res.render('template', {page:"main"} );
+		res.render('template', {page:"index"} );
 	})
 
-	app.get("/users", function(req, res){
-    userModel.find({},{"fname" : true}, function(err,users){
-            if(err) {
-							res.send(err);
-						} if(users) {
-						console.log(users);
-        		res.render('template', {page:"users", users: users} );
-           } else {
-             res.send("No users found with that ID")
-           }
-			 });
 
-	})
 
 	app.get("/about", function(req, res){
 		res.render('template', {page:"about"} );
 	})
-	app.get("/registration", function(req, res){
-		res.render('template', {page:"registration"} );
-	})
 
-	app.get("/profile", function(req, res){
-		var userTemplate = {
-			fname: '',
-			lname: '',
-			email: '',
-			passwd: '',
-		};
-		console.log(req.query);
-		var userId = req.query.id;
-		if (userId) {
-			userModel.findOne({_id:userId}, function(err,user){
-							if(err) {
-								 return res.send(err);
-							}
-							if(user) {
-							console.log(user);
-							res.render('template', {page:"profile", user: user} );
-							} else {
-								console.log('privet')
-								res.render('template', {page:"profile", user: userTemplate} );
-							}
-				 });
-		} else {
-			res.render('template', {page:"profile", user:userTemplate} );
-		}
-   	})
+
 	app.get("/game", function(req, res){
 	res.render('template', {page:"game"} );
 	})
-	app.get("/autorization", function(req, res){
-	res.render('template', {page:"autorization"} );
-	})
+	app.get('/profile', isLoggedIn, function(req, res) {
+
+		res.render('template', {page:"profile",
+					user : req.user
+			});
+	});
+
+	// LOGOUT ==============================
+	app.get('/logout', function(req, res) {
+			req.logout();
+			res.redirect('/');
+	});
+
+			app.get('/login', function(req, res) {
+					res.render('template', {page:"login", message: req.flash('loginMessage') });
+			});
+
+
+			app.post('/login', passport.authenticate('local-login', {
+					successRedirect : '/profile',
+					failureRedirect : '/login',
+					failureFlash : true
+			}));
+
+
+
+			app.get('/signup', function(req, res) {
+					res.render('template', {page:"signup", message: req.flash('signupMessage') });
+			});
+
+
+			app.post('/signup', passport.authenticate('local-signup', {
+					successRedirect : '/profile',
+					failureRedirect : '/signup',
+					failureFlash : true
+			}));
+
+
+
+
+			app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+
+			app.get('/auth/facebook/callback',
+					passport.authenticate('facebook', {
+							successRedirect : '/profile',
+							failureRedirect : '/'
+					}));
+
+
+			app.get('/connect/local', function(req, res) {
+					res.render('template', {page:"connect-local", message: req.flash('loginMessage') });
+			});
+			app.post('/connect/local', passport.authenticate('local-signup', {
+					successRedirect : '/profile',
+					failureRedirect : '/connect/local',
+					failureFlash : true
+			}));
+
+
+
+
+			app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
+
+
+			app.get('/connect/facebook/callback',
+					passport.authorize('facebook', {
+							successRedirect : '/profile',
+							failureRedirect : '/'
+					}));
+
+	app.get('/unlink/local', isLoggedIn, function(req, res) {
+			var user            = req.user;
+			user.local.email    = undefined;
+			user.local.password = undefined;
+			user.save(function(err) {
+					res.redirect('/profile');
+			});
+	});
+
+	app.get('/unlink/facebook', isLoggedIn, function(req, res) {
+			var user            = req.user;
+			user.facebook.token = undefined;
+			user.save(function(err) {
+					res.redirect('/profile');
+			});
+	});
+
+
+
+function isLoggedIn(req, res, next) {
+	if (req.isAuthenticated())
+			return next();
+
+	res.redirect('/');
+}
+
 
 	//404
 	app.use(function(req, res){

@@ -17,25 +17,26 @@
 
 
 
-  <% if (page == "users") { %>
-    <% include pages/users %>
-  <% } %>
 
-	<% if (page == "main") { %>
+
+	<% if (page == "index") { %>
 		<% include pages/index %>
 	<% } %>
+  <% if (page == "connect-local") { %>
+    <% include pages/connect-local %>
+  <% } %>
 
 	<% if (page == "game") { %>
 	 <% include pages/game %>
 
  <% } %>
 
- <% if (page == "registration") { %>
-  <% include pages/registration %>
+ <% if (page == "signup") { %>
+  <% include pages/signup %>
  <% } %>
 
- <% if (page == "autorization") { %>
-  <% include pages/autorization %>
+ <% if (page == "login") { %>
+  <% include pages/login %>
  <% } %>
 
   <% if (page == "about") { %>

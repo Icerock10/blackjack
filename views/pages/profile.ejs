@@ -1,27 +1,55 @@
-<div id="sign-in">
 <div class="container">
-<div class="user-avatar">
+
+   
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+
+        <!-- FACEBOOK INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+
+                <!-- check if the user has this token (is the user authenticated with this social account) -->
+                <% if (user.facebook.token) { %>
+                    <p>
+                        <strong>email</strong>: <%= user.facebook.email %><br>
+                        <strong>name</strong>: <%= user.facebook.name %><br>
+                    </p>
+
+                    <a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/facebook" class="btn btn-primary">Connect Facebook</a>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
 
 
 
- </div>
-       <h2 class="form-signin-heading">Your profile</h2>
-			 <form class="form-signin">
-        <div class="changes" id="change-name">Change name</div>
-        <label for="inputname" class="sr-only">Username</label>
-        <input type="fname" name="fname" value="<%= user.fname %>" id="inputname" class="form-control">
-        <div class="changes" id="change-surname">Change Surname</div>
-        <label for="inputsurname" class="sr-only">surname</label>
-        <input type="lname" value="<%= user.lname %>" id="inputsurname" class="form-control">
-        <div class="changes" id="change-email">Change email</div>
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email"  value="<%= user.email %>" id="inputEmail" class="form-control">
-        <div class="changes" id="change-password">Change password</div>
-        <label for="inputpassword" class="sr-only">password</label>
-        <input type="passwd" value="<%= user.passwd %>" id="inputpassword" class="form-control">
-        <label for="inputfile" class="sr-only">FIle</label>
-        <input type="file" id="inputfile" class="form-control">
-        <button class="btn btn-lg btn-success btn-block" type="submit">Save Changes</button>
-      </form>
-    </div> <!-- /container -->
+
 </div>

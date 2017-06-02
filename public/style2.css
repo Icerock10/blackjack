@@ -1,513 +1,639 @@
-*{
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Roboto, 'Open Sans', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.section .container {
+  padding: 30px 0 50px 0;
+}
+
+.section.bg {
+  background: #f7f7f7;
+}
+/*
+  Header
+*/
+
+.hold {
+  height: 80px;
+}
+
+.header {
+  line-height: 80px;
+  width: 100%;
+  transition: line-height 0.2s linear, box-shadow 0.2s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(245, 245, 245, 0.97);
+}
+
+.header.small {
+  line-height: 50px;
+  box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+}
+
+.header.small > .container > #logo {
+  height: 40px;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: red;
+  float: left;
+  height: 40px;
+  width: 170px;
+  margin-left: 5px;
+}
+
+ul.nav {
+  float: right;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
-html {
-    position: relative;
-    min-height: 100%;
-    min-width: 100%;
 
-    }
-body {
-  margin-bottom: 12vh;
+ul.nav li {
+  float: left;
+  position: relative;
 
 }
-.blog-masthead {
-  background: #161616;
-  height: 78px;
+ul.nav li:hover {
+   background: orange;
 }
 
-.blog-header {
-  background: #050806;
-  height: 40px;
-  border: 1px solid white;
-  border-radius: 10px 10px;
+ul.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
 }
-.blog-title{
+
+ul.nav li:hover a {
   color: white;
 }
-.nav-link {
+
+ul.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+/*
+  Slider
+
+*/
+.section .slider {
+  background: url('http://white-karma.ru/uploads/images/masti%20kart.jpg') center no-repeat;
+  background-size: 100%;
+
+}
+
+.section .footer {
+  background: #333;
+}
+
+.slidercontent {
+  text-align: center;
+}
+
+.hero {
+  font-family: 'Roboto Slab', sans-serif;
   color: white;
-}
-.nav-link-signup {
-  color: #E7E4ED;
-  margin-left: 8px;
-  padding-top: 20px;
-  font-size: 18px;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.nav-link-signin {
-  color: #E7E4ED;
-  margin-left: 600px;
-  padding-top: 20px;
-  font-size: 18px;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-
-}
-.logo-img {
- border: 1px solid black;
- }
- #nav-home{
-   border-left: 1px solid white;
-   margin-left: 195px;
- }
-#nav-play{
-  margin-left: 30px;
-border-left: 1px solid white;
-}
-#nav-rules {
-  margin-left: 30px;
-  border-left: 1px solid white;
-}
-#nav-profile {
-  margin-left: 30px;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-}
-li {
-  display: block;
-float: left;
-white-space: nowrap;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 12vh; /*высота футера будет зависеть от высоты экрана*/
+h1.hero {
+  font-size: 54px;
 }
-footer {
-    background: #161616;
 
+h2.hero {
+  font-size: 30px;
+  margin-bottom: 60px;
 }
-.text-muted {
-  margin-left: 120px;
-}
-.btn {
-  height: 50%;
+
+h1.hero:after {
+  content: "";
+  width: 300px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  margin: auto;
   margin-top: 15px;
 }
 
-#main-container img {
-  margin-left: 120px;
-  margin-top: 50px;
-
-}
-.form-signin {
-  border: 1px solid #d8dee2;
-  border-radius: 10px 10px;
-  max-width: 430px;
-  padding: 15px;
-  margin: 0 auto;
-  margin-top: 20px;
+.call {
+  color: white;
+  display: block;
+  margin-bottom: 20px;
 }
 
-.label-link {
-  margin-left: 120px;
-}
-.form-signin-heading {
-  margin-left: 460px;
-
-}
-.logo-cards {
-  margin-left: 485px;
-  margin-top: 35px;
-}
-.new_account {
-  border: 1px solid #d8dee2;
-  margin: 0 auto;
-  max-width: 430px;
-  margin-top: 30px;
-  border-radius: 5px 5px;
-  padding: 15px;
-}
-.create-link {
-margin-left: 80px;
-}
-.form-registration-2 {
-  border: 1px solid #d8dee2;
-  border-radius: 10px 10px;
-  max-width: 430px;
-  padding: 15px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.form-registration-heading-2 {
-  margin-left: 455px;
-}
-.blackjacktable {
-      position: relative;
-      width: 100%;
-      height: 720px;
-      background:  url('./images/img/table.png') center no-repeat;
-      background-size: 60%;
-}
-#page-about {
-      width: 100%;
-      height: 1000px;
-      background: #e5e5e5;
-}
-#registration {
-  width: 100%;
-  height: 600px;
-  background: #e5e5e5;
-
-}
-#sign-in {
-  width: 100%;
-  height: 600px;
-  background: #e5e5e5;
-}
-#first-image-about {
-  margin-top: 10px;
-  width: 100%;
-  height: 300px;
-  background: url('./images/img/aboutphoto.jpg')  no-repeat;
-  background-size: 100%;
-  border: 3px solid black;
-
+.call span {
+  display: inline;
+  border: 1px solid white;
+  padding: 8px 13px;
+  font-size: 20px;
+  transition: background 0.15s linear;
 }
 
-#rules-page {
-  margin-top: 35px;
-  margin-left: 200px;
-  width: 70%;
-  background: white;
-  height: 800px;
-  border: 1px solid #738287;
-  border-radius: 5px 5px;
+.call span:hover {
+  background: orange;
+  cursor: pointer;
+}
+/*
+  Columns
+*/
+
+.col {
+  float: left;
+  padding: 0;
+  margin: 0;
   position: relative;
 }
-.rules-h1 {
+
+.col.four {
+  width: 23%;
+  margin: 0 1%;
+}
+
+.col.three {
+  width: 31.3%;
+  margin: 0 1%;
+}
+
+.col.two {
+  width: 40%;
+  margin: 0 2.5%;
+  padding: 0 2.5%;
+}
+
+.col.extrapad {
   padding-top: 20px;
-  margin-left: 480px;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  padding-bottom: 20px;
 }
-.rulesp{
 
-    line-height: 16px;
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-    font-size: 18px;
-    line-height: 18px;
-    margin: .8em 2em;
-    color: #404040;
-    word-wrap: break-word;
+.col .service,
+.col .feature {
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Roboto Slab', sans-serif;
 }
-#first-image-main {
+
+.col .service:after {
+  content: "";
+  width: 50px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.col .feature {
+  font-size: 19px;
+}
+
+.col h1.side,
+.col p.side,
+.col span.side:first-of-type {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.col .icon {
+  border-radius: 50%;
+  border: 1px solid gray;
+  height: 85px;
+  width: 85px;
+  line-height: 85px;
+  text-align: center;
+  margin: 0 auto;
+  transition: background 0.25s linear, color 0.25s linear;
+}
+
+.col .icon.side {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -15px;
+  height: 50px;
+  width: 50px;
+}
+
+.col:hover > .icon {
+  background: #F44336;
+  color: white;
+}
+
+.col:hover > .icon.side {
+  background: initial;
+  color: initial;
+}
+
+.responsivegroup {
+  display: none;
+}
+/*
+  Column specifics
+*/
+
+.col p,
+.col h1 {
+  padding: 0 1%;
+  text-align: center;
+}
+
+.group.margin {
+  margin-bottom: 20px;
+}
+
+.col .imgholder-1 {
+  height: 300px;
   width: 100%;
-  height: 800px;
-  background: url('./images/img/mainimage.jpg')  no-repeat;
-  background-size: 100%;
+  background: url('http://selva070.me/wp-content/uploads/2015/02/nodejs-wallpaper-nsfw.jpg')center no-repeat;
+  background-size: 120%;
+  transition: background 0.3s linear;
+}
 
+.col .imgholder-2 {
+  height: 300px;
+  width: 100%;
+  background: url('https://s-media-cache-ak0.pinimg.com/originals/3d/e3/8c/3de38c1ab9551c4468800f13ea604386.jpg')center no-repeat;
+  background-size: 100%;
+  transition: background 0.3s linear;
+}
+.col .imgholder-3 {
+  height: 300px;
+  width: 100%;
+  background: url('https://iainhunter.files.wordpress.com/2016/01/logo-gray-1024x512-993867aa92.png')center no-repeat;
+  background-size: 150%;
+  transition: background 0.3s linear;
+}
+.col .imgholder-4 {
+  height: 300px;
+  width: 100%;
+  background: url('http://guiasymanuales.es/imagenes/2014/01/jquery.jpg')center no-repeat;
+  background-size: 170%;
+  transition: background 0.3s linear;
+}
+.col .imgholder-5 {
+  height: 300px;
+  width: 100%;
+  background: url('http://wedal.ru/images/stories/ARTICLES/templates/bootstrap/bootstrap.png')center no-repeat;
+  background-size: 98%;
+  transition: background 0.3s linear;
+}
+.col .imgholder-6 {
+  height: 300px;
+  width: 100%;
+  background: url('http://clover.studio/wp-content/uploads/2016/07/socket-io-best-practices-1024x480.png')center no-repeat;
+  background-size: 170%;
+  transition: background 0.3s linear;
+}
+.col.bg {
+  background: #FFF;
+}
+
+.col.pointer {
+  cursor: pointer;
+}
+
+
+
+.col span.feature {
+  font-size: 20px;
+}
+/*
+  Text
+*/
+
+.container > h1:not(.hero) {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container > h1:after {
+  content: "";
+  width: 30px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+h2 {
+  font-family: 'Roboto Slab', sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.left,
+.left > h1,
+.left > p {
+  text-align: left;
+}
+
+.reset {
+  text-align: left !important;
+}
+
+.reset:after {
+  display: none !important;
+}
+/*
+  Slider with Content
+*/
+
+.white h1,
+.white h2,
+.white p,
+.white div,
+.white a {
+  color: #fff;
+}
+/*
+  Responsive
+*/
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .col.four {
+    width: 48%;
+    margin: 1%;
+  }
+  .col.three {
+    display: block;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  .header {
+    height: auto;
+    background: #eee;
+  }
+  #logo {
+    position: initial;
+    float: none;
+    display: block;
+    transform: none;
+    margin: 10px auto 0 auto;
+  }
+  ul.nav {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  ul.nav li {
+    float: initial;
+    display: inline-block;
+  }
+  .responsivegroup {
+    display: block;
+  }
+  .responsivegroup:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media all and (max-width:450px) {
+  .col, .col.four, .col.three, .col.two {
+    display: block;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  .col.extrapad {
+    padding: 1%;
+    margin-bottom: 10px;
+  }
+  .group {
+    display: none;
+  }
+}
+.feature {
+  font-family: 'Roboto Slab', sans-serif;
+color: black;
+font-weight: normal;
+letter-spacing: 1px;
+
+}
+.container-logo-footer {
+    background: #B5B0D6;
+
+}
+
+
+.img-container-top-2 {
+  position: absolute;
+  left: 74px;
+  top: -6px;
+}
+.img-container-top-3 {
+    position: absolute;
+    left: 65px;
+    top: -25px;
+}
+.img-container-top-4 {
+     position: absolute;
+     top: -25px;
+     left: 55px;
+}
+#icon-1 {
+  background: url('http://www.puremicrogaming.com/images/game/logo/145x136/6ab6c997-70fd-4809-b632-66045d98bb0e.png') center no-repeat;
+  background-size: 135%;
+}
+#icon-2 {
+  background: url('https://39mqrj484imb19gkbl4529ez-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Blackjack-Ballroom.png')center no-repeat;
+  background-size: 130%;
+}
+#icon-3 {
+  background: url('http://www.casinoadvisor.com/images/game_specific/big/gold_series_double_exposure_blackjack.gif')center no-repeat;
+  background-size: 120%;
+}
+#icon-4 {
+background: url('http://www.dev-plus-five.com/aqcontent/common/images/ext-microgaming/hilo13europeanblackjack.png')center no-repeat;
+background-size: 130%;
+}
+#icon-5 {
+  background: url('http://www.hometowndumpsterrental.com/files/sidebar_images/roofing-reviews.jpg') center no-repeat;
+  background-size: 130%;
+}
+.logo-img {
+    position: absolute;
+
+}
+.profile-avatar {
+      position: relative;
+      left: 470px;
+      top: 10px;
+}
+#avatar-profile {
+  width: 150px;
+  height: 150px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+#form-profile {
+   position: relative;
+   left: 420px;
+}
+
+
+.signupblock {
+    background: #fafafa;
+    position: relative;
+    top: 160px;
+    width: 100%;
+    height: 500px;
+}
+#signup-form {
+   position: relative;
+   left: 230px;
+   top: 62px;
+}
+.signup-head {
+  position: relative;
+  left: 170px;
+  letter-spacing: 4px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: normal;
+}
+#login-block{
+  position: relative;
+  left: 230px;
+  top: 62px;
+}
+.login-head {
+  position: relative;
+  left: 170px;
+  letter-spacing: 4px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: normal;
+}
+.profile-main-text {
+  letter-spacing: 4px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: normal;
+}
+.main-text-container {
+font-weight: 300;
+font-family: 'Roboto Slab', sans-serif;
+letter-spacing: 2px;
+font-size: 16px;
+
+}
+.service {
+  font-size: 19px;
+  font-weight: 300;
+  font-family: 'Roboto Slab', sans-serif;
+  color: black;
+  letter-spacing: 1px;
 
 }
 .card-1 {
-      height: 100px;
-      width: 80px;
-      background-repeat: no-repeat;
-      position: relative;
-      border: 1px solid gray;
-}
-#krest2 {
-  background: url('./images/img/2krest.png');
-  background-size: 100%;
-}
 
-#krest3 {
-  background: url('./images/img/3krest.png');
-  background-size: 100%;
-}
-#krest4 {
-  background: url('./images/img/4krest.png');
-  background-size: 100%;
-}
-#krest5 {
-  background: url('./images/img/5krest.png');
-  background-size: 100%;
-}
-#krest6 {
-  background: url('./images/img/6krest.png');
-  background-size: 100%;
-}
-#krest7 {
-  background: url('./images/img/7krest.png');
-  background-size: 100%;
-}
-#krest8 {
-  background: url('./images/img/8krest.png');
-  background-size: 100%;
-}
-#krest9 {
-  background: url('./images/img/9krest.png');
-  background-size: 100%;
-}
-#krest10 {
-  background: url('./images/img/10krest.png');
-  background-size: 100%;
-}
-#krestvalet {
-  background: url('./images/img/valetkrest.png');
-  background-size: 100%;
-}
-#krestdama {
-  background: url('./images/img/damakrest.png');
-  background-size: 100%;
-}
-#krestkorol {
-  background: url('./images/img/korolkrest.png');
-  background-size: 100%;
-}
-#kresttuz {
-  background: url('./images/img/tuzkrest.png');
-  background-size: 100%;
-}
-
-#bybna2 {
-  background: url('./images/img/2bybna.png');
-  background-size: 100%;
-}
-
-#bybna3 {
-  background: url('./images/img/3bybna.png');
-  background-size: 100%;
-}
-#bybna4 {
-  background: url('./images/img/4bybna.png');
-  background-size: 100%;
-}
-#bybna5 {
-  background: url('./images/img/5bybna.png');
-  background-size: 100%;
-}
-#bybna6 {
-  background: url('./images/img/6bybna.png');
-  background-size: 100%;
-}
-#bybna7 {
-  background: url('./images/img/7bybna.png');
-  background-size: 100%;
-}
-#bybna8 {
-  background: url('./images/img/8bybna.png');
-  background-size: 100%;
-}
-#bybna9 {
-  background: url('./images/img/9bybna.png');
-  background-size: 100%;
-}
-#bybna10 {
-  background: url('./images/img/10bybna.png');
-  background-size: 100%;
-}
-#bybnavalet {
-  background: url('./images/img/valetbybna.png');
-  background-size: 100%;
-}
-#bybnadama {
-  background: url('./images/img/damabybna.png');
-  background-size: 100%;
-}
-#bybnakorol {
-  background: url('./images/img/korolbybna.png');
-  background-size: 100%;
-}
-#bybnatuz {
-  background: url('./images/img/tuzbybna.png');
-  background-size: 100%;
-}
-
-#chirva2 {
-  background: url('./images/img/2chirva.png');
-  background-size: 100%;
-}
-
-#chirva3 {
-  background: url('./images/img/3chirva.png');
-  background-size: 100%;
-}
-#chirva4 {
-  background: url('./images/img/4chirva.png');
-  background-size: 100%;
-}
-#chirva5 {
-  background: url('./images/img/5chirva.png');
-  background-size: 100%;
-}
-#chirva6 {
-  background: url('./images/img/6chirva.png');
-  background-size: 100%;
-}
-#chirva7 {
-  background: url('./images/img/7chirva.png');
-  background-size: 100%;
-}
-#chirva8 {
-  background: url('./images/img/8chirva.png');
-  background-size: 100%;
-}
-#chirva9 {
-  background: url('./images/img/9chirva.png');
-  background-size: 100%;
-}
-#chirva10 {
-  background: url('./images/img/10chirva.png');
-  background-size: 100%;
-}
-#chirvavalet {
-  background: url('./images/img/valetchirva.png');
-  background-size: 100%;
-}
-#chirvadama {
-  background: url('./images/img/damachirva.png');
-  background-size: 100%;
-}
-#chirvakorol {
-  background: url('./images/img/korolchirva.png');
-  background-size: 100%;
-}
-#chirvatuz {
-  background: url('./images/img/tuzchirva.png');
-  background-size: 100%;
-}
-
-#pika2 {
-  background: url('./images/img/2pika.png');
-  background-size: 100%;
-}
-
-#pika3 {
-  background: url('./images/img/3pika.png');
-  background-size: 100%;
-}
-#pika4 {
-  background: url('./images/img/4pika.png');
-  background-size: 100%;
-}
-#pika5 {
-  background: url('./images/img/5pika.png');
-  background-size: 100%;
-}
-#pika6 {
-  background: url('./images/img/6pika.png');
-  background-size: 100%;
-}
-#pika7 {
-  background: url('./images/img/7pika.png');
-  background-size: 100%;
-}
-#pika8 {
-  background: url('./images/img/8pika.png');
-  background-size: 100%;
-}
-#pika9 {
-  background: url('./images/img/9pika.png');
-  background-size: 100%;
-}
-#pika10 {
-  background: url('./images/img/10pika.png');
-  background-size: 100%;
-}
-#pikavalet {
-  background: url('./images/img/valetpika.png');
-  background-size: 100%;
-}
-#pikadama {
-  background: url('./images/img/damapika.png');
-  background-size: 100%;
-}
-#pikakorol {
-  background: url('./images/img/korolpika.png');
-  background-size: 100%;
-}
-#pikatuz {
-  background: url('./images/img/tuzpika.png');
-  background-size: 100%;
-}
-
-
-
-
-.player-1 {
 position: absolute;
-width: 70px;
-height: 85px;
-background: url('./images/img/dealer.png')no-repeat;
-background-size: 100%;
-left: 320px;
-bottom: 325px;
+
+
+
 }
 
-.player-2 {
-  position: absolute;
-  width: 70px;
-  height: 85px;
-  background: url('./images/img/dealer.png')no-repeat;
-  background-size: 100%;
-  left: 1520px;
-  bottom: 325px;
+.blackjacktable {
+    height: 1000px;
+    background: #1d1d1d;
+    background-size: 100%;
 }
-
-.player-3 {
-  position: absolute;
-  width: 70px;
-  height: 85px;
-  background: url('./images/img/dealer.png') no-repeat;
-  background-size: 100%;
-  bottom: 25px;
-  left: 900px;
+.line-profile {
+    background: #49DECA;
+    height: 1px;
+}
+#form-profile-top {
+      margin-left: 390px;
+     width: 30%;
+}
+.file-styles {
+  margin-left: 360px;
+}
+#form-profile-facebook {
+  margin-left: 390px;
+ width: 30%;
+}
+#facebook-icon {
+    margin-left: 120px;
+}
+#editProfiles {
+  background: green;
+  color: white;
+}
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  border: 1px solid #B8D9D4;
+}
+.table-main {
+    position: absolute;
+    left: 15%;
 }
 .button-bet {
-  position: absolute;
-  width: 70px;
-  height: 80px;
-  left: 1110px;
-  bottom: 20px;
-}
-.button-hide {
-  position: absolute;
-  width: 70px;
-  height: 80px;
-  left: 1250px;
-  bottom: 20px;
-}
-
-#inputfile {
- margin-top: 20px;
-
-}
-.changes {
-  font-size: 18px;
-
-}
-.user-avatar {
-  position: relative;
-  width: 120px;
-  height: 110px;
-  background: white;
-  border: 1px solid green;
-  left: 490px;
-  margin-top: 20px;
-}
-#autorization-pass{
-   margin-top: 30px;
-}
-#registration-surname {
-  margin-top: 30px;
-}
-#registration-email {
-  margin-top: 30px;
-}
-#registration-password {
-  margin-top: 30px;
-}
-.logout {
-  position: absolute;
-  right: -280px;
-  width: 60px;
-  height: 60px;
-  background: white;
-}
-.borderClass {
-  border: 1px solid red;
+    position: absolute;
+    left: 55%;
+    top: 65%;
 }

@@ -3,36 +3,42 @@
 <head>
   <meta charset="utf-8">
 	<title>blackjack</title>
-
   <link rel="stylesheet" type="text/css" href="/style2.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+  <script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io.connect('http://localhost:8080');
+	</script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
   <script src="jqscript.js"></script>
+
 </head>
 <body>
 
 
 
-	<% include partials/header %>
 
-
-
+  <% include partials/header %>
 
 
 	<% if (page == "index") { %>
-		<% include pages/index %>
-	<% } %>
-  <% if (page == "connect-local") { %>
-    <% include pages/connect-local %>
+    <% include partials/sidebar %>
+    <% include pages/index %>
+    <% include partials/footer %>
   <% } %>
 
-	<% if (page == "game") { %>
-	 <% include pages/game %>
 
- <% } %>
+	 <% if (page == "game") { %>
+	 <% include pages/game %>
+   <% } %>
 
  <% if (page == "signup") { %>
-  <% include pages/signup %>
+   <% include pages/signup %>
  <% } %>
 
  <% if (page == "login") { %>
@@ -40,24 +46,25 @@
  <% } %>
 
   <% if (page == "about") { %>
-		<% include pages/about %>
-	<% } %>
+    <% include partials/sidebar %>
+    <% include pages/about %>
+    <% include partials/footer %>
+  <% } %>
 
 	<% if (page == "profile") { %>
-		<% include pages/profile %>
+
+    <% include pages/profile %>
 	<% } %>
 
 	<% if (page == "404") { %>
-		<% include pages/404 %>
+    <% include partials/sidebar %>
+    <% include pages/404 %>
 	<% } %>
 
 	<% if (page == "500") { %>
-		<% include pages/500 %>
+    <% include partials/sidebar %>
+    <% include pages/500 %>
 	<% } %>
 
-	<% include partials/footer %>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>

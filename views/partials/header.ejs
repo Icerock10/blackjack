@@ -1,34 +1,36 @@
-<div id="page">
+<div class="hold">
 <div class="header">
-        <div class="blog-masthead">
-        <div class="container">
-        <nav class="nav blog-nav">
-              <div class="logo-img">
-              <a href="/">
-							<img src="http://www.toolorbit.com/image/Black-Jack/Logo/Black-Jack-Logolg.jpg" alt="">
-              </a>
-							</div>
-          <div class="logout">
-           <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-          </div>
-              <a class="nav-link-signin btn btn-secondary" href="/login">Sign in </a>
-              <a class="nav-link-signup btn btn-success" href="/signup">Sign up</a>
+  <div class="container">
 
-			 </nav>
-       </div>
-       </div>
+    <div class="logo-img">
+            <a href="/">
+    <img src="http://www.toolorbit.com/image/Black-Jack/Logo/Black-Jack-Logolg.jpg"width="70%" height="70%" alt="">
+            </a>
+  </div>
+    <ul class="nav">
 
-       <div class="blog-header">
-       <div class="container">
-       <nav class="nav blog-nav">
-           <ul>
-           <li><a class="nav-link active" id="nav-home" href="/">Home</a></li>
-           <li><a class="nav-link active" id="nav-play" href="/game">Play Blackjack</a></li>
-           <li><a class="nav-link active" id="nav-rules" href="/about">How to Play Blackjack</a></li>
-           <li><a class="nav-link active" id="nav-profile" href="/profile">Profile</a></li>
+      <li><a href="/">Home</a></li>
+      <% if(auth) { %>
+      <li><a href="/game">Game</a></li>
+      <% } %>
+      <li><a href="/about">How to play</a></li>
+      <% if(auth) { %>
+      <li><a href="/profile">Profile</a></li>
+      <% } %>
 
-         </ul>
-       </nav>
-       </div>
-       </div>
+      <% if(!auth){ %>
+      <li><a href="login">Sign in</a></li>/
+      <li><a href="/signup">Sign up</a></li>
+      <% } %>
+      <% if(auth){ %>
+      <li><a href="/logout">Logout</a></li>
+
+
+
+      <% } %>
+    </ul>
+
+
+  </div>
+</div>
 </div>

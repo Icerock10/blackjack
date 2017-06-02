@@ -1,0 +1,31 @@
+<div class="signupblock">
+<div class="container" id="login-block">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1 class="login-head"><span class="fa fa-sign-in"></span> Login</h1>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Your Password">
+        </div>
+
+        <button type="submit" class="btn btn-success btn-lg" id="buttonlgn">Login</button>
+    </form>
+    <hr>
+
+    <p>Need an account? <a href="/signup">Signup</a></p>
+    <p>Or go <a href="/">home</a>.</p>
+
+</div>
+</div>
+</div>

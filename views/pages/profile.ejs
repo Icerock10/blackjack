@@ -1,55 +1,71 @@
+<div class="profile-page">
 <div class="container">
 
-   
+
     <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <h1 class="profile-main-text"><span class="fa fa-anchor"></span>PROFILE</h1>
+</div>
+<div class="profile-avatar">
+<img src="<%=user.local.avatar %>" alt="" id="avatar-profile">
+</div>
+    <hr class="line-profile">
+    <div class="success-update"></div>
 
+
+<% if (user.local.email) { %>
+      <h1>Local</h1>
+     <form method="POST" action="/editprofile" id="form-profile-top">
+       <div class="form-group">
+       <input type="text" class="form-control" name="email" value="<%= user.local.email %>" placeholder="email">
+     </div>
+     <div class="form-group">
+      <input type="text" class="form-control" name="fname" value="<%= user.local.fname %>" placeholder="fname">
     </div>
+    <div class="form-group">
+     <input type="text" class="form-control" name="lname" value="<%= user.local.lname %>" placeholder="lname">
+   </div>
+      <div class="form-group">
+       <input type="password" class="form-control" name="password" value="<%= user.local.password %>" placeholder="password">
+     </div>
 
-    <div class="row">
+     <div class="form-group" id="update-user-local">
+         <input type="submit" class="form-control" value="Update User" id="editProfiles">
+       </div>
+     </form>
+  <% } %>
 
-        <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
+      <% if (user.facebook.token) { %>
 
-                <% if (user.local.email) { %>
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
+      <form method="POST" action="/editfacebookprofile" id="form-profile-facebook">
+      <h3 id="facebook-icon" class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+      <div class="form-group">
+      <input type="text" class="form-control"  name="email" value="<%= user.facebook.email %>" placeholder="email">
+     </div>
+      <div class="form-group">
+       <input type="text" class="form-control" name="fname" value="<%= user.facebook.name %>" placeholder="fname">
+     </div>
+     <div class="form-group">
+      <input type="text" class="form-control" name="lname" value="<%= user.facebook.lname %>" placeholder="lname">
+     </div>
+     <div class="form-group">
+      <input type="password" class="form-control" name="password" value="<%= user.facebook.password %>" placeholder="password">
+     </div>
+     <div class="form-group">
+        <input type="submit" class="form-control" name="Update Facebook" id="editProfilesFacebook">
+      </div>
+     </form>
 
-                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
-                <% } else { %>
-                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
-                <% } %>
+   <% } %>
+   <hr>
+  <div class="file-styles">
+   <input type='file'  name='image' id="file-input">
+   <input type='submit' value="Загрузить Аватар" id="file-submit">
+ </div>
+   <hr class="line-profile">
 
-            </div>
-        </div>
+</div>
 
-        <!-- FACEBOOK INFORMATION -->
-        <div class="col-sm-6">
-            <div class="well">
-                <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+</div>
 
-                <!-- check if the user has this token (is the user authenticated with this social account) -->
-                <% if (user.facebook.token) { %>
-                    <p>
-                        <strong>email</strong>: <%= user.facebook.email %><br>
-                        <strong>name</strong>: <%= user.facebook.name %><br>
-                    </p>
-
-                    <a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
-                <% } else { %>
-                    <a href="/connect/facebook" class="btn btn-primary">Connect Facebook</a>
-                <% } %>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
+</div>
 </div>
